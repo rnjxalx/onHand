@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "OnHand",
+    "slug": "catcare-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "icon": "./src/assets/app-logo.png",
+    "splash": {
+      "image": "./src/assets/app-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "고양이 사진을 촬영해 AI 캐릭터를 만들기 위해 카메라를 사용합니다.",
+        "NSPhotoLibraryUsageDescription": "고양이 사진을 등록해 AI 캐릭터를 만들기 위해 사진 라이브러리에 접근합니다."
+      },
+      "bundleIdentifier": "com.anonymous.catcareapp"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/app-logo.png",
+        "backgroundColor": "#FDC34F"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.anonymous.catcareapp"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "고양이 사진을 등록하기 위해 사진 라이브러리에 접근합니다.",
+          "cameraPermission": "고양이 사진을 촬영하기 위해 카메라를 사용합니다."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a0f8ff2d-5029-4c97-bd7e-275da6a24264"
+      }
+    }
+  }
+}
